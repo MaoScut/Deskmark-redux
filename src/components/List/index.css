@@ -1,0 +1,14 @@
+.list-group-item{
+	display: block;
+	cursor: pointer;
+}
+.list-group-item-selected,.list-group-item:hover{
+	background-color: #ddd;
+}
+
+.right{
+	float: right;
+}
+.list{
+
+}

@@ -1,0 +1,34 @@
+body{
+	font-size: 25px;
+}
+.top-layer{
+	width: 1000px;
+	display: flex;
+}
+.left-bar{
+	flex: 1;
+}
+.right-bar{
+	margin-left: 20px;
+	flex: 3;
+}
+.create-button{
+	width: 100%;
+	display: inline-block;
+	outline: none;
+	cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+	font: 25px/100% Arial, Helvetica, sans-serif;
+	padding: .5em 2em .55em;
+	text-shadow: 0 1px 1px rgba(0,0,0,.3);
+	border-radius: .5em;
+	box-shadow: 0 1px 2px rgba(0,0,0,.2);
+}
+.button:hover {
+	text-decoration: none;
+}
+.button:active {
+	position: relative;
+	top: 1px;
+}
