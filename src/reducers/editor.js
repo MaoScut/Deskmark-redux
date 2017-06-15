@@ -15,8 +15,8 @@ export default function editor(state = initialState, action) {
 			return Object.assign({}, state, {selectedId: null, isEditing: true});
 		case ActionType.EDIT_ENTRY:
 			return Object.assign({}, state, {selectedId: null, isEditing: true});
-		case ActionType.FINISH_DELETE_ENTRY:
-			return Object.assign({}, state, {selectedId: null, isEditing: false});
+		// case ActionType.FINISH_DELETE_ENTRY:
+		// 	return Object.assign({}, state, {selectedId: null, isEditing: false});
 		case ActionType.CANCEL_EDIT:
 			return Object.assing({}, state, {isEditing: false});
 		default:

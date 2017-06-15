@@ -6,7 +6,6 @@ const STORAGE_KEY = 'deskmark';
 export function getAll() {
 	return new Promise((resolve)=>{
 		let result = STORAGE.getItem(STORAGE_KEY);
-
 		try {
 			resolve(result ? JSON.parse(result) : []);
 		} catch (e) {
@@ -42,7 +41,7 @@ export function deleteEntry(id) {
 	.then(saveAll);
 }
 
-export function updataEntry(id, title, content) {
+export function updateEntry(id, title, content) {
 	let entry;
 	return getAll()
 	.then(results => results.map(result => result.id === id 

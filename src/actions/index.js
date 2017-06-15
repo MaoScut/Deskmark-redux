@@ -1,4 +1,4 @@
-import * as storage from 'utils/';
+import * as storage from '../utils/storage';
 
 export const SELECT_ENTRY = 'SELECT_ENTRY';
 export const CREATE_NEW_ENTRY = 'CREATE_NEW_ENTRY';
@@ -44,7 +44,7 @@ export function deleteEntry(id) {
 export function fetchEntryList() {
 	return dispatch => {
 		storage.getAll()
-		.then(items => dispatch(updateEntryList))
+		.then(items => dispatch(updateEntryList(items)))
 	};
 }
 
