@@ -17,8 +17,7 @@ function ItemShowLayer({item, onEdit, onDelete}){
 				<button className={styles.button} onClick={()=>onDelete(item.id)}>delete</button>
 			</div>
 			<div className={styles['show-container']}>
-			<h2 className={styles['title']} >{item.title}</h2>
-			
+				<h2 className={styles['title']} >{item.title}</h2>			
 				<div dangerouslySetInnerHTML={{__html: content}} />
 			</div>
 		</div>

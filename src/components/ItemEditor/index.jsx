@@ -8,12 +8,17 @@ class ItemEditor extends React.Component{
 			title: '',
 			content: ''
 		};
-		let saveText = item.id?'save':'create';
+		let saveText = item.id ? 'save' : 'create';
 
 		let save = ()=>{
-		item.title=this.refs.title.value;
-		item.content=this.refs.content.value;
-			onSave(item);
+		// item.title=this.refs.title.value;
+		// item.content=this.refs.content.value;
+		// 	onSave(item);
+			onSave({
+				...item,
+				title: this.refs.title.value,
+				content: this.refs.content.value,
+			});
 		}
 		return(
 		<div>
