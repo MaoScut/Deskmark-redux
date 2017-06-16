@@ -25,7 +25,11 @@ export function cancelEdit() {
 		type: CANCEL_EDIT,
 	};
 }
-
+//updateEntryList is used at three timing.
+//when after firstly render the deskmark component, fetch all items.
+//when delete an item, refetch all items
+//when save new entry (modify or create), refetch all items
+//it can be reuse, so it is sense to separate.
 function updateEntryList(items) {
 	return {
 		type: UPDATE_ENTRY_LIST,
@@ -49,6 +53,7 @@ export function fetchEntryList() {
 }
 
 function updateSavedEntry(id) {
+	debugger;
 	return {
 		type: UPDATE_SAVED_ENTRY,
 		id,
@@ -64,7 +69,7 @@ export function saveEntry(item) {
 			.then(items => dispatch(updateEntryList(items)));
 		} else {
 			storage.insertEntry(title, content)
-			.then(inserted => dispatch(updateSavedEntry(inserted,id)))
+			.then(inserted => dispatch(updateSavedEntry(inserted.id)))
 			.then(() => storage.getAll())
 			.then(items => dispatch(updateEntryList(items)))
 		}

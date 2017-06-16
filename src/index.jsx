@@ -10,6 +10,7 @@ import rootReducer from './reducers';
 import App from './components';
 
 const store = applyMiddleware(thunkMiddleware)(createStore)(rootReducer);
+debugger;
 
 const render = (Component) => {
   ReactDOM.render(
@@ -26,7 +27,7 @@ render(App);
 
 // Hot Module Replacement API
 if (module.hot) {
-  module.hot.accept('./components/Deskmark/Deskmark', () => {
+  module.hot.accept('./components', () => {
     render(App)
   });
 }

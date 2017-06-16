@@ -83,7 +83,7 @@ class Deskmark extends React.Component{
 	return(		
 		<section className={styles['top-layer']}>
 				<div className={styles['left-bar']}>
-					<button className={styles['create-button']} onClick={actions.createNewEntry}>create???</button>
+					<button className={styles['create-button']} onClick={actions.createNewEntry}>create</button>
 					<List selectedId={selectedId} items={items} onSelect={actions.selectEntry} />
 				</div>
 				<div className={styles['right-bar']}>
