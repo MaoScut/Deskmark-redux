@@ -3,6 +3,7 @@ const webpack = require('webpack');
 
 module.exports = {
   context: resolve(__dirname, 'src'),
+  // The base directory, an absolute path, for resolving entry points and loaders from configuration.
 
   entry: [
     'react-hot-loader/patch',

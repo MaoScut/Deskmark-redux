@@ -2,6 +2,12 @@ import marked from 'marked';
 import React from 'react';
 import styles from './index.css';
 
+/**
+ * ItemShowLayer show article and delete button
+ * @param object item article
+ * @param function onEdit show ItemEditor
+ * @param function onDelete delete this item
+ */
 function ItemShowLayer({item, onEdit, onDelete}){
 	if(!item||!item.id){
 		return(

@@ -1,6 +1,11 @@
 import React from 'react';
 import styles from './index.css'
 
+/**
+ * ItemEditor update or create an article
+ * @param {function} onSave save article
+ * @param {function} onCancle cancel edit and than hide
+ */
 class ItemEditor extends React.Component{
 	render() {
 		const {onSave, onCancel} = this.props;
@@ -11,9 +16,7 @@ class ItemEditor extends React.Component{
 		let saveText = item.id ? 'save' : 'create';
 
 		let save = ()=>{
-		// item.title=this.refs.title.value;
-		// item.content=this.refs.content.value;
-		// 	onSave(item);
+		// use es7 to spread an object, override same keys' value
 			onSave({
 				...item,
 				title: this.refs.title.value,
