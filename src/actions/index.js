@@ -18,6 +18,12 @@ export function selectEntry(id) {
 	};
 }
 
+export function editEntry() {
+	return {
+		type: EDIT_ENTRY,
+	}
+}
+
 /**
  * createNewEntry create a new article, show ItemEditor
  * @return {actionObj}

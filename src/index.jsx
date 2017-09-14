@@ -9,7 +9,10 @@ import { Provider } from 'react-redux';
 import rootReducer from './reducers';
 import App from './components';
 
-const store = applyMiddleware(thunkMiddleware)(createStore)(rootReducer);
+// const store = applyMiddleware(thunkMiddleware)(createStore)(rootReducer);
+// both are the same, but the below is easier to understand,
+// first we create the store, and we enhance it.
+const store = createStore(rootReducer, applyMiddleware(thunkMiddleware));
 
 const render = (Component) => {
   ReactDOM.render(

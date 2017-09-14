@@ -14,11 +14,11 @@ export default function editor(state = initialState, action) {
 		case ActionType.CREATE_NEW_ENTRY: 
 			return Object.assign({}, state, {selectedId: null, isEditing: true});
 		case ActionType.EDIT_ENTRY:
-			return Object.assign({}, state, {selectedId: null, isEditing: true});
+			return Object.assign({}, state, {isEditing: true});
 		// case ActionType.FINISH_DELETE_ENTRY:
 		// 	return Object.assign({}, state, {selectedId: null, isEditing: false});
 		case ActionType.CANCEL_EDIT:
-			return Object.assing({}, state, {isEditing: false});
+			return Object.assign({}, state, {isEditing: false});
 		default:
 			return state;
 	}
